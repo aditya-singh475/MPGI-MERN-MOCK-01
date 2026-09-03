@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Application Manager </h1>
+
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name">
+                <small id="nameError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email">
+                <small id="emailError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter 10 digit phone number">
+                <small id="phoneError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+                <small id="dobError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Other"> Other
+                    </label>
+                </div>
+                <small id="genderError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course">
+                    <option value="">Select Course</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Python">Python</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                </select>
+                <small id="courseError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Skills</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="skills" value="HTML"> HTML
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="CSS"> CSS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills" value="Git"> Git
+                    </label>
+                </div>
+                <small id="skillsError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="about">About Student</label>
+                <textarea id="about" rows="5" placeholder="Write about the student"></textarea>
+                <small id="aboutError" class="error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Profile Photo</label>
+                <input type="file" id="photo" accept="image/*">
+                <small id="photoError" class="error"></small>
+            </div>
+
+            <button type="submit">Add Student</button>
+        </form>
+
+        <div class="student-count">
+            <h2>Total Students: <span id="studentCount">0</span></h2>
+        </div>
+
+        <div id="studentContainer" class="student-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
